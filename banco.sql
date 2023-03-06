@@ -40,4 +40,13 @@ ALTER TABLE tb_nota ADD FOREIGN KEY (id_aluno) REFERENCES tb_aluno;
 
 -- NOTA -> MATERIA (UMA nota possui obrigatoriamente APENAS UMA materia)
 ALTER TABLE tb_nota ADD FOREIGN KEY (id_materia) REFERENCES tb_materia;
+-- CADASTRO MATERIAS
+INSERT INTO tb_materia ( id, descricao ) VALUES ( 1, 'PORTUGUES' );
+INSERT INTO tb_materia ( id, descricao ) VALUES ( 2, 'MATEMATICA' );
+INSERT INTO tb_materia ( id, descricao ) VALUES ( 3, 'HISTORIA' );
+
+-- CADASTRO DAS TURMAS
+INSERT INTO tb_turma ( id, descricao ) VALUES ( 1, '3-A' );
+INSERT INTO tb_turma ( id, descricao ) VALUES ( 2, '2-A' );
+INSERT INTO tb_turma ( id, descricao ) VALUES ( 3, '1-B' );
 
