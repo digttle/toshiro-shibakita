@@ -6,3 +6,11 @@ CREATE TABLE dados (
     Cidade varchar(50),
     Host varchar(50)
 );
+CREATE TABLE materias (
+    MateriaID int,
+    DescMateria varchar(20),
+    Nota int,
+    iDAluno int
+);
+    
+    
