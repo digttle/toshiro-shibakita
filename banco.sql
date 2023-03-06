@@ -1,16 +1,33 @@
-CREATE TABLE dados (
-    AlunoID int,
-    Nome varchar(50),
-    Sobrenome varchar(50),
-    Endereco varchar(150),
-    Cidade varchar(50),
-    Host varchar(50)
+-- MATERIAS
+CREATE TABLE tb_materia
+(
+   id BIGINT PRIMARY KEY,
+   descricao TEXT NOT NULL
+ );
+
+-- TURMAS
+CREATE TABLE tb_turma
+(
+  id BIGINT PRIMARY KEY,
+  descricao TEXT NOT NULL
 );
-CREATE TABLE materias (
-    MateriaID int,
-    DescMateria varchar(20),
-    Nota int,
-    iDAluno int
+
+-- ALUNOS
+CREATE TABLE tb_aluno
+(
+  id BIGINT PRIMARY KEY,
+  nome TEXT NOT NULL,
+  id_turma BIGINT
 );
-    
-    
+
+-- NOTAS
+CREATE TABLE tb_nota
+(
+   id_materia BIGINT NOT NULL,
+   id_aluno BIGINT NOT NULL,
+   UNI REAL,
+   UNII REAL,
+   UNIII REAL,
+   UNIV REAL,
+   PRIMARY KEY( id_materia, id_aluno )
+ );
